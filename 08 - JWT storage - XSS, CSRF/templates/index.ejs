@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/tacit-css.min.css"/>
+    <title>The Vulnerable Movie Center</title>
+    <style>
+      body {
+        padding-top:0px;
+      }
+      .thin {
+        margin-top:5px;
+        margin-bottom:5px;
+      }
+      #search-form {
+        text-align:right;
+        margin-bottom:0;
+        padding-bottom:0;
+      }
+      #search-result {
+        display: none;
+      }
+      #movie-data {
+        padding-bottom:10px;
+      }
+      #playbill {
+        vertical-align:top;
+        margin:10px;
+      }
+      #movie-details {
+        display:inline-block;
+        width:40%;
+      }
+      #search-term {
+        font-style: italic;
+      }
+    </style>
+    <script src="js/search.js"></script>
+    <script src="js/auth_local.js"></script>
+    <script src="js/auth_session.js"></script>
+    <script src="js/submit_review.js"></script>
+
+  </head>
+  <body>
+    <section>
+      <h1 style="margin-top:5px">The Vulnerable Movie Center</h1>
+      <hr class="thin">
+      <hr class="thin">
+    </section>
+
+    <section id="movie-data">
+      <img id="playbill" src="images/good-bad-ugly.jpg"/>
+      <div id="movie-details">
+        <b>Title:</b> The Good, the Bad and the Ugly<br/>
+        <b>Year:</b> 1966<br/>
+        <b>Directed by:</b> Sergio Leone<br/>
+        <b>Starring:</b> Clint Eastwood, Lee Van Cleef, Eli Wallach<br/>
+        <b>Duration:</b> 177 min.<br/>
+        <br/>
+        <b>Plot:</b>
+        <p>During the Civil War, two men forming an uneasy alliance as bounty hunting scammers have to fight against a third in a race to find a treasure in gold buried in a remote cemetery.</p>
+      </div>
+    </section>
+      <div style="text-align: center">
+        <button type="button" style="background: #275a90;color: #fff;" onclick="return auth_local()">Token Local Storage</button>
+        <button type="button" style="background: #275a90;color: #fff;" onclick="return auth_session()">Token Session Storage</button>
+        <button type="button" style="background: #275a90;color: #fff;" onclick="location.href='session/jwt/cookie';">Token Cookie</button>
+      </div>
+    <section id="comments", style="margin-top:10px">
+      <form method="post" action="reviews">
+        <fieldset>
+          <textarea id='123'name="newReview" cols="80" rows="5" placeholder="Add your review"></textarea>
+            <div>You need a token to submit a review.</div>
+        </fieldset>
+        <fieldset>
+          <button type="button" style="background: #275a90;color: #fff;" onclick="submit_review()">Submit</button>
+        </fieldset>
+      </form>
+      <hr>
+      <h2>Comments</h2>
+      <dl>
+        <% reviews.forEach(review => {%>
+          <dt><%= review.username %></dt><dd><%-review.review %></dd>
+        <% }); %>
+      </dl>
+    </section>
+  </body>
+</html>
+<!--to do weryfikacja po tokenie w cookies oraz localsotrage-->

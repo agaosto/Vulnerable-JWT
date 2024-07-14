@@ -1,0 +1,23 @@
+{
+  "name": "04---jku-injection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jku-injection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "express-jwt": "^0.1.3",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "0.4.0",
+    "jsonwebtoken-latest": "npm:jsonwebtoken@^8.5.1",
+    "jwk-to-pem": "^2.0.5",
+    "jws": "^2.0.0",
+    "node-jose": "^0.10.0",
+    "request": "^2.88.2"
+  }
+}

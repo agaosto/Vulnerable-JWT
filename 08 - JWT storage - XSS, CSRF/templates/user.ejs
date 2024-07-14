@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="css/tacit-css.min.css"/>
+    <title>The Vulnerable Movie Center</title>
+    <style>
+      body {
+        padding-top:0px;
+      }
+      .thin {
+        margin-top:5px;
+        margin-bottom:5px;
+      }
+    </style>    
+  </head>
+  <body>
+    <section>
+      <h1 style="margin-top:5px">The Vulnerable Movie Center</h1>
+      
+      <hr class="thin">
+
+      <div style="text-align: right">
+        <a href="/">Home</a>
+      </div>
+
+      <form method="post" action="user">
+        <fieldset>
+          <label for="username">Your name:</label>
+          <input name="username" type="text" value="<%= username %>" class="thin">
+        </fieldset>
+        
+        <fieldset>
+          <label for="email">Your email:</label>
+          <input name="email" type="email" value="<%= email %>" class="thin">
+        </fieldset>
+
+        <fieldset>
+          <button type="submit" class="thin">Save</button></form>
+        </fieldset>
+      </form>
+    </section>
+    
+  </body>
+</html>
