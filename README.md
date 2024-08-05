@@ -1,4 +1,6 @@
 # Vulnerable-JWT
+
+### Overview
 Collection of vulnerable APIs/apps to test following JWT attacks:
 - Lack of signature verification - the attacker can modify token's header and payload as the signature is not properly verified,
 - None algorithm - the attacker can use the *Unsecured JWT*,
@@ -9,4 +11,10 @@ Collection of vulnerable APIs/apps to test following JWT attacks:
 - kid injection - path traversal - the attacker can point an arbitrary system file to be used for verification,
 - JWT storage - the attacker can steal the user's token using XSS if it is stored in Local/Session Storage or perform CSRF attack if it is stored in a cookie. 
 
-Use `npm install` to install dependencies listed in *package.json*. To run the vulnerable API/app use `node app.js` command.
+[Node.js](https://nodejs.org/) is used in the project with various vulnerable versions of npm packages.
+
+### How to run?
+1. Clone the repository,
+2. Browse to the specific folder (e.g., *01 - Lack of signature verification*),
+3. Use `npm install` to install dependencies listed in *package.json*,
+4. Run using `node app.js` command.
