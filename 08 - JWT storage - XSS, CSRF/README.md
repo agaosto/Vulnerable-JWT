@@ -9,7 +9,7 @@ This version of the application has been modified to showcase JWT misconfigurati
 ### Running the Application
 
 To run the application:
-1. Browse to the *08 - JWT storage - XSS, CSRF* folder
+1. Browse to the '*08 - JWT storage - XSS, CSRF*' folder
 2. Install the dependencies by running the following command:
 
    ```shell
